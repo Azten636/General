@@ -8,11 +8,11 @@
     <script src="https://kit.fontawesome.com/fc90ac564b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 class="text-center p-3">Los amo padressssss </h1>
-<div class="container-fluid row">
+    <h1 class="text-center p-3">Plantilla crud</h1>
+    <div class="container-fluid row">
 
     <form class ="col-4 p-3">
-  <h3 class="text-center text-secondary">registro de personas</h3>
+  <h3 class="text-center text-secondary">Registro de personas</h3>
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nombre de la persona</label>
     <input type="text" class="form-control" name="nombre">
@@ -53,15 +53,15 @@
   <tbody>
     <?php
 include "modelo/conexion.php";
-$sql = $conexion-> query ("select * from persona");
-while ($datos = $sql->fetchobject()){?>
+$sql = $conexion->query("select * from persona");
+while ($datos = $sql->fetch_object()) { ?>
 
 
       
 <tr>
   <td><?= $datos->id_persona ?></td>
-  <td><?= $datos->nombre ?></td>
-  <td><?= $datos->apellido ?></td>
+  <td><?= $datos->nombres ?></td>
+  <td><?= $datos->apellidos ?></td>
   <td><?= $datos->dni ?></td>
   <td><?= $datos->fecha_nac ?></td>
   <td><?= $datos->correo ?></td>
@@ -70,7 +70,7 @@ while ($datos = $sql->fetchobject()){?>
         <a href=""class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
         <a href=""class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
       </td>
-<?php}
+<?php }
     ?>
    
    

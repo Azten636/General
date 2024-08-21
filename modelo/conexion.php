@@ -1,5 +1,5 @@
 <?php
-$conexion = new mysqli ("local host","root ","", "crud_php");
+$conexion = new mysqli ("localhost","root","", "crud_salud");
 $conexion-> set_charset("utf8");
-?>
+
 
